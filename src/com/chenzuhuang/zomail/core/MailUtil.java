@@ -18,6 +18,16 @@ public class MailUtil {
 	private static String auth = xmlUtil.getParam("auth");
 	private static String host = xmlUtil.getParam("host");
 	
+	public static final String EMAIL_HTML_UTF_8 = "text/html;charset=utf-8";
+	
+	/**
+	 * 
+	 * @param toEmail	target email
+	 * @param title
+	 * @param content
+	 * @param contentType
+	 * @return
+	 */
 	public static boolean sendEmail(String toEmail, String title, String content, String contentType){
 		Properties properties = System.getProperties();
 		properties.put("mail.smtp.auth", auth);
@@ -39,6 +49,7 @@ public class MailUtil {
 			//On different system, you may use different encoding.
 			//String new_content = new String(content.getBytes("GBK"), "utf-8");
 			message.setContent(content, "text/html;charset=utf-8");
+			
 			Transport.send(message);
 		} catch (MessagingException e) {
 			e.printStackTrace();
@@ -50,7 +61,7 @@ public class MailUtil {
 	
 	/*
 	public static void main(String[] args) {
-		sendEmail("564923716@qq.com","title", "<p>content</p>","text/html;charset=utf-8");
+		sendEmail("564923716@qq.com","title", "<p>content</p>",EMAIL_HTML_UTF_8);
 	}
 	*/
 }
