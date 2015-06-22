@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zomail>
+	<email>test@163.com</email>
+	<password>test</password>
+	<host>smtp.163.com</host>
+	<auth>true</auth>
+</zomail>
