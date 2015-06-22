@@ -48,9 +48,9 @@ public class MailUtil {
 		return true;
 	}
 	
-	
+	/*
 	public static void main(String[] args) {
 		sendEmail("564923716@qq.com","title", "<p>content</p>","text/html;charset=utf-8");
 	}
-
+	*/
 }
